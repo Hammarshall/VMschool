@@ -1,13 +1,14 @@
-﻿using System;
-using VMschool.VendingIitems.ProductCategory;
+﻿using VendingMachine.Class;
+using System;
 
-namespace VMschool.VendingIitems.Beverages
+namespace VendingMachine.Class;
+
+internal class WhiskySour : Beverage
 {
-	internal class WhiskySour : Beverage
+    public WhiskySour()
     {
         ProductName = "Whiskey Sour";
         ProductPrice = 90;
         ProductDescription = "The best Whiskey Sour you will ever have";
-	}
+    }
 }
-

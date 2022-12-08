@@ -1,24 +1,27 @@
 ﻿using System;
-namespace VMschool.VendingIitems.ClassifiedInfo
+using VendingMachine.Class;
+
+namespace VendingMachine.Class;
+
+public class NuclearCodes : ClassifiedInfo
 {
-	public class NuclearCodes : ClassifiedInfo
+    private bool _isUsed; // is it used
+
+
+    public NuclearCodes()
     {
-        private bool _isUsed; // is it used
+        ProductName = "Worlds Nuclear Codes";
+        ProductPrice = 150;
+        ProductDescription = "With a kick of a button all your probems can go boom";
+    }
 
-        public NuclearCodes()
-        {
-            ProductName = "Worlds Nuclear Codes";
-            ProductPrice = 150;
-            ProductDescription = "With a kick of a button all your probems can go boom";
-        }
+    public override void Use()
+    {
+        if (_isUsed)
+            Console.WriteLine("Russia is no more.");
 
-        public override void Use()
-        {
-            if (_isUsed)
-                Console.WriteLine("Russia is no more.");
-            else
-                Console.WriteLine("You nuked Russia.");
-            _isUsed = true;
-        }
+        else
+            Console.WriteLine("You nuked Russia.");
+        _isUsed = true;
     }
 }

@@ -1,7 +1,8 @@
 ﻿using System;
-using VMschool.VendingIitems.ProductCategory;
+using VendingMachine.Class;
 
-namespace VMschool.VendingIitems.Beverages;
+
+namespace VendingMachine.Class;
 
 internal class MultiVitamin : Beverage
 {

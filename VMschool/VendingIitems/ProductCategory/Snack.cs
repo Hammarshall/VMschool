@@ -1,31 +1,28 @@
-﻿using System;
-using VMschool.Interface;
+﻿using VMschool.Interface;
+using VendingMachine.Class;
 
-namespace VMschool.VendingIitems.ProductCategory
+namespace VendingMachine.Class;
+
+public class Snack : VendingItem, IVendingItem
 {
-	public class Snack : VendingItem, IVendingItem
+    private bool _isEaten;
+
+    public void Use()
     {
-        private bool _isEaten;
-
-        public void Use()
-        {
-            if (_isEaten)
-                Console.WriteLine("You've already eaten " + ProductName + ".");
-            else
-                Console.WriteLine("You ate " + ProductName + ".");
+        if (_isEaten)
+            Console.WriteLine("You've already eaten " + ProductName + ".");
+        else
+            Console.WriteLine("You ate " + ProductName + ".");
             _isEaten = true;
-        }
+    }
+    public void Buy()
+    {
+        //Console.WriteLine("You bought " + ProductName + " for " + ProductPrice + Config.CURRENCY + ".");
+        Console.WriteLine("You bought " + ProductName + ".");
 
-        public void Buy()
-        {
-            //Console.WriteLine("You bought " + ProductName + " for " + ProductPrice + Config.CURRENCY + ".");
-            Console.WriteLine("You bought " + ProductName + ".");
-
-        }
-        public int Price()
-        {
-            return ProductPrice;
-        }
+    }
+    public int Price()
+    {
+        return ProductPrice;
     }
 }
-

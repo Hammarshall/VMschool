@@ -1,14 +1,14 @@
 ﻿using System;
 using VMschool.Interface;
-using VMschool.Class;
 using VMschool.Money;
+using VendingMachine.Class;
 
-namespace VMschool.Menu
+namespace VMschool;
+
+public class VendingMachine
 {
-	public class VendingMachine
-	{
-        public int amountDeposited;
-        private Wallet wallet = new();
+    public int amountDeposited;
+    private Wallet wallet = new();
 
         public void UserMenu()
         {
@@ -252,6 +252,4 @@ namespace VMschool.Menu
             amountDeposited += possibleAmount;
             return possibleAmount;
         }
-    }
 }
-

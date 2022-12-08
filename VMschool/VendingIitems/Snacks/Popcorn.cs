@@ -1,16 +1,13 @@
 ﻿using System;
-using VMschool.VendingIitems.ProductCategory;
+using VendingMachine.Class;
 
-namespace VMschool.VendingIitems.Snacks
+namespace VendingMachine.Class;
+public class Popcorn : Snack
 {
-	public class Popcorn : Snack
+    public Popcorn()
     {
-		public Popcorn()
-		{
             ProductName = "Popcorn";
             ProductPrice = 5;
             ProductDescription = "Salted";
-        }
-	}
+    }
 }
-

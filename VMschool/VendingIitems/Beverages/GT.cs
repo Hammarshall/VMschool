@@ -1,16 +1,14 @@
 ﻿using System;
-using VMschool.VendingIitems.ProductCategory;
+using VendingMachine.Class;
 
-namespace VMschool.VendingIitems.Beverages
+namespace VendingMachine.Class;
+
+internal class GT : Beverage
 {
-	internal class GT : Beverage
+    public GT() // GT is an object
     {
-        public GT() // GT is an object
-        {
             ProductName = "Gin and tonic";
             ProductPrice = 80;
             ProductDescription = "A perfecty currated drink";
-        }
     }
 }
-

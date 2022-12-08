@@ -1,15 +1,14 @@
 ﻿using System;
-using VMschool.VendingIitems.ProductCategory;
+using VendingMachine.Class;
 
-namespace VMschool.VendingIitems.Snacks
+namespace VendingMachine.Class;
+
+public class Nuts : Snack
 {
-	public class Nuts : Snack
+    public Nuts()
     {
-		public Nuts()
-		{
-            ProductName = "Nuts";
-            ProductPrice = 20;
-            ProductDescription = "Trailmix";
-        }
-	}
+        ProductName = "Nuts";
+        ProductPrice = 20;
+        ProductDescription = "Trailmix";
+    }
 }
