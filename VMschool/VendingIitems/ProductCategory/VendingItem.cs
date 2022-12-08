@@ -12,10 +12,10 @@ public abstract class VendingItem
 
     public void Description()
     {
-            Console.WriteLine(ProductDescription + ".\nPrice: " + ProductPrice + Config.CURRENCY + ".");
+        Console.WriteLine(ProductDescription + ".\nPrice: " + ProductPrice + Config.CURRENCY + ".");
     }
     public void ShowProductName()
     {
-            Console.WriteLine(ProductName + "");
+        Console.WriteLine(ProductName + "");
     }
 }

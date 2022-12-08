@@ -9,17 +9,17 @@ public abstract class Beverage : VendingItem, IVendingItem
 
     public void Use()
     {
-            if (_isEmpty)
-                Console.WriteLine(ProductName + " is empty.");
-            else
-                Console.WriteLine("You drank " + ProductName + ".");
-            _isEmpty = true;
+        if (_isEmpty)
+            Console.WriteLine(ProductName + " is empty.");
+        else
+            Console.WriteLine("You drank " + ProductName + ".");
+        _isEmpty = true;
     }
 
     public void Buy()
     {
-            //Console.WriteLine("You bought " + ProductName + " for " + ProductPrice + Config.CURRENCY + ".");
-            Console.WriteLine("You bought " + ProductName + ".");
+        //Console.WriteLine("You bought " + ProductName + " for " + ProductPrice + Config.CURRENCY + ".");
+        Console.WriteLine("You bought " + ProductName + ".");
     }
 
     public int Price()

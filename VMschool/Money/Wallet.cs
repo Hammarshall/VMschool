@@ -12,12 +12,12 @@ public class Wallet
 
     public void InitMoney()
     {
-            Cash.Add(Currency.HUNDRED, 0);
-            Cash.Add(Currency.FIFTY, 0);
-            Cash.Add(Currency.TWENTY, 0);
-            Cash.Add(Currency.TEN, 10);
-            Cash.Add(Currency.FIVE, 10);
-            Cash.Add(Currency.ONE, 10);
+        Cash.Add(Currency.HUNDRED, 0);
+        Cash.Add(Currency.FIFTY, 0);
+        Cash.Add(Currency.TWENTY, 0);
+        Cash.Add(Currency.TEN, 10);
+        Cash.Add(Currency.FIVE, 10);
+        Cash.Add(Currency.ONE, 10);
     }
 
     public int GetMoney()
@@ -44,7 +44,6 @@ public class Wallet
     private int RemoveAmount(int amount)
     {
         var walletAmount = GetMoney();
-
         var amountLeft = amount;
 
         foreach (var keyPair in Cash) // Loopa igenom alla valörer, högst till lägst.
@@ -88,8 +87,8 @@ public class Wallet
 
             while (amountLeft >= value) // Så länge valören är mindre än summan som är kvar kan vi ge tillbaka en sån valör
             {
-                    amountLeft -= value;
-                    Cash[keyPair.Key] += 1;
+                amountLeft -= value;
+                Cash[keyPair.Key] += 1;
             }
         }
     }

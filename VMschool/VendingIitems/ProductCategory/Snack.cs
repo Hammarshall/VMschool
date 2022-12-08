@@ -13,7 +13,7 @@ public class Snack : VendingItem, IVendingItem
             Console.WriteLine("You've already eaten " + ProductName + ".");
         else
             Console.WriteLine("You ate " + ProductName + ".");
-            _isEaten = true;
+        _isEaten = true;
     }
     public void Buy()
     {
