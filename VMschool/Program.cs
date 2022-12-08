@@ -1,3 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using VMschool;
 
+var menu = new StartMenu();
+StartMenu.Start();
