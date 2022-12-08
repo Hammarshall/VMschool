@@ -11,10 +11,20 @@
     <None Remove="Interface\" />
     <None Remove="Menu\" />
     <None Remove="Money\" />
+    <None Remove="VendingIitems\" />
+    <None Remove="VendingIitems\Beverages\" />
+    <None Remove="VendingIitems\ClassifiedInfo\" />
+    <None Remove="VendingIitems\ProductCategory\" />
+    <None Remove="VendingIitems\Snacks\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
     <Folder Include="Menu\" />
     <Folder Include="Money\" />
+    <Folder Include="VendingIitems\" />
+    <Folder Include="VendingIitems\Beverages\" />
+    <Folder Include="VendingIitems\ClassifiedInfo\" />
+    <Folder Include="VendingIitems\ProductCategory\" />
+    <Folder Include="VendingIitems\Snacks\" />
   </ItemGroup>
 </Project>

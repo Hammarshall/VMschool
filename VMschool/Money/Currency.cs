@@ -1,4 +1,6 @@
 ﻿using System;
+using VMschool.Money;
+
 namespace VMschool.Money
 {
 	public enum Currency
