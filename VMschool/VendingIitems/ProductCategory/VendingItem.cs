@@ -4,7 +4,7 @@ using VMschool;
 
 namespace VendingMachine;
 
-public abstract class VendingItem
+public abstract class VendingItem // basen för alla producter
 {
     public string? ProductName { get; set; } // Name
     public int ProductPrice { get; set; } // Price

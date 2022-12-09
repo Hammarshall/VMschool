@@ -10,7 +10,7 @@ public class Wallet
         InitMoney();
     }
 
-    public void InitMoney()
+    public void InitMoney() // the users wallet contains this in the given currency
     {
         Cash.Add(Currency.HUNDRED, 0);
         Cash.Add(Currency.FIFTY, 0);
@@ -20,14 +20,14 @@ public class Wallet
         Cash.Add(Currency.ONE, 10);
     }
 
-    public int GetMoney()
+    public int GetMoney() // gets the money
     {
         var sum = 0;
         foreach (var key in Cash) sum += (int)key.Key * key.Value;
         return sum;
     }
 
-    public string GetMoneyDetails()
+    public string GetMoneyDetails() // displays the money correctly
     {
         var str = "";
         var sum = 0;
@@ -41,7 +41,7 @@ public class Wallet
         return str;
     }
 
-    private int RemoveAmount(int amount)
+    private int RemoveAmount(int amount) // removes money from wallet
     {
         var walletAmount = GetMoney();
         var amountLeft = amount;
@@ -78,7 +78,7 @@ public class Wallet
         return removedAmount;
     }
 
-    public void ReturnFunds(int amount)
+    public void ReturnFunds(int amount) // returns money to the user 
     {
         var amountLeft = amount;
         foreach (var keyPair in Cash) // Loopa igenom alla valörer, högst till lägst.

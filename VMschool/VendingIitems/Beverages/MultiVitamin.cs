@@ -4,7 +4,7 @@ using VendingMachine.Class;
 
 namespace VendingMachine.Class;
 
-internal class MultiVitamin : Beverage
+internal class MultiVitamin : Beverage // arv från Beverage
 {
     public MultiVitamin()
     {

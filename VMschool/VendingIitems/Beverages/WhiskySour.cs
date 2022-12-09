@@ -5,7 +5,7 @@ namespace VendingMachine.Class;
 
 internal class WhiskySour : Beverage
 {
-    public WhiskySour()
+    public WhiskySour() // object
     {
         ProductName = "Whiskey Sour";
         ProductPrice = 90;

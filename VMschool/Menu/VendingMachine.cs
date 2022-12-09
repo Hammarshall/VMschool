@@ -74,7 +74,7 @@ public class VendingMachine
         }
     }
 
-    private void BevMenu()
+    private void BevMenu() // menu for all drinks
     {
         var option = 0;
         var isInvalidInput = false;
@@ -99,7 +99,7 @@ public class VendingMachine
             }
         } while (isInvalidInput);
 
-        switch (option)
+        switch (option) // choose with drink you whant
         {
             case 1:
                 DisplayItem(new GT());
@@ -115,7 +115,7 @@ public class VendingMachine
         }
     }
 
-    private void CIMenu()
+    private void CIMenu() // ClassifiedInfo menu
     {
         var option = 0;
         var isInvalidInput = false;
@@ -139,7 +139,7 @@ public class VendingMachine
             }
         } while (isInvalidInput);
 
-        switch (option)
+        switch (option) // choose product from the menu
         {
             case 1:
                 DisplayItem(new Area51Documentation());
@@ -155,7 +155,7 @@ public class VendingMachine
         }
     }
 
-    private void SnackMenu()
+    private void SnackMenu() // snack menu
     {
         var option = 0;
         var isInvalidInput = false;
@@ -179,7 +179,7 @@ public class VendingMachine
             }
         } while (isInvalidInput);
 
-        switch (option)
+        switch (option) // all snacks to choose from
         {
             case 1:
                 DisplayItem(new Chips());
@@ -195,10 +195,10 @@ public class VendingMachine
         }
     }
 
-    private void DisplayItem(IVendingItem item)
+    private void DisplayItem(IVendingItem item) // displays the choosen item from all of the diffrent menus
     {
-        item.ShowProductName();
-        item.Description();
+        item.ShowProductName(); // shows name
+        item.Description(); // shows desc
 
         Console.WriteLine("Purchase? (Y/N)");
         var key = Console.ReadLine().ToUpper();
@@ -209,43 +209,43 @@ public class VendingMachine
             int numDrinks = int.Parse(Console.ReadLine());
 
             int totalPrice = 0;
-            if (numDrinks > 0)
+            if (numDrinks > 0) // chooses how many they whant
             {
                 totalPrice = numDrinks * item.Price();
 
-                if (amountDeposited >= totalPrice)
+                if (amountDeposited >= totalPrice) // the user has enough cash to make the purchase
                 {
                     //Console.WriteLine("You have enough cash to make the purchase.");
                     Console.WriteLine("The total price for {0} is {1:C}.", numDrinks, totalPrice);
                     BuyItem(item);
                 }
-                else
+                else // not enough cash in the mashine
                 {
                     Console.WriteLine("You do not have enough cash to make the purchase.");
                 }
             }
         }
-        UserMenu();
+        UserMenu(); // takes the user back to main menu
     }
 
-    private void BuyItem(IVendingItem item)
+    private void BuyItem(IVendingItem item) // when the user chooses to buy the item
     {
-        if (amountDeposited >= item.Price())
+        if (amountDeposited >= item.Price()) // if the deposited amout is more than the item price
         {
-            amountDeposited -= item.Price();
+            amountDeposited -= item.Price(); // removes the item price from the money in the mashine
             item.Buy();
             item.Use();
             item.Use();
             Console.WriteLine("Money left in VendigMacine: " + amountDeposited + "$");
         }
-        else
+        else // the deposited amount is to litte
         {
             Console.WriteLine("Deposit more money!");
             Console.WriteLine("Money left in VendigMacine: " + amountDeposited + "$");
         }
     }
 
-    public int DepositMoney(Wallet wallet, int amount)
+    public int DepositMoney(Wallet wallet, int amount) // deposit money from wallet into mashine
     {
         var possibleAmount = wallet.Deposit(amount);
         amountDeposited += possibleAmount;

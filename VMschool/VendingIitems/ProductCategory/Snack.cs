@@ -3,11 +3,11 @@ using VendingMachine.Class;
 
 namespace VendingMachine.Class;
 
-public class Snack : VendingItem, IVendingItem
+public class Snack : VendingItem, IVendingItem // arv
 {
     private bool _isEaten;
 
-    public void Use()
+    public void Use() // funktioner
     {
         if (_isEaten)
             Console.WriteLine("You've already eaten " + ProductName + ".");

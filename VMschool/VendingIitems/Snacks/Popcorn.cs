@@ -2,9 +2,10 @@
 using VendingMachine.Class;
 
 namespace VendingMachine.Class;
-public class Popcorn : Snack
+
+public class Popcorn : Snack // arv
 {
-    public Popcorn()
+    public Popcorn() // object for item (product) popcorn
     {
         ProductName = "Popcorn";
         ProductPrice = 5;

@@ -3,9 +3,9 @@ using VendingMachine.Class;
 
 namespace VendingMachine.Class;
 
-public class Chips : Snack
+public class Chips : Snack // arv
 {
-    public Chips()
+    public Chips() // object
     {
         ProductName = "Chips";
         ProductPrice = 30;

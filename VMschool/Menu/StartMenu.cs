@@ -5,8 +5,8 @@ namespace VMschool.Menu;
 
 public class StartMenu
 {
-    public static void Start() //Metod för att starta metod Menu
+    public static void Start() //Starts the program
     {
-            new VendingMachine().UserMenu();
+        new VendingMachine().UserMenu();
     }
 }
