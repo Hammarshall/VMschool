@@ -24,7 +24,7 @@ A option in the menu is allowing the user to freely input money into the vending
 - ClassifiedInfo
 - Snack
 
-## ProductCategory:
+## ProductCategory: ( Beverage, ClassifiedInfo, Snack)
 
 - a bool if its empty (if you have used the item or not)
 - Function Use() called when the user purchase the item and the tailiormade text appears
